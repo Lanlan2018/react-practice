@@ -5,13 +5,11 @@ import { IconContext } from "react-icons";
 class Weather extends React.Component {
   constructor(props) {
     super(props);
-    this.clickWeatherIcon = this.clickWeatherIcon.bind(this);
     this.weatherDataArr = [];
     let ajax = new XMLHttpRequest();
     ajax.open("GET", "./data.json", true);
     ajax.onreadystatechange = () => {
       if (ajax.readyState === 4 && ajax.status == "200") {
-        console.log('test ajax:', ajax.responseText);
         this.weatherDataArr = JSON.parse(ajax.responseText).weather;
         this.forceUpdate();
       }
@@ -28,7 +26,7 @@ class Weather extends React.Component {
     return (
       <div>
         <h4>  One Week Weather Forecast  </h4>
-        {this.weatherDataArr.map((weatherObj) => <DaylyWeather key={weatherObj.time} weather={weatherObj} handleClick={this.clickWeatherIcon(weatherObj)} />)}
+        {this.weatherDataArr.map((weatherObj) => <DaylyWeather key={weatherObj.time} weather={weatherObj} handleClick={this.clickWeatherIcon.bind(this,weatherObj)} />)}
       </div>
     );
   }
