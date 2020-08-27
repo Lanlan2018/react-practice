@@ -5,11 +5,10 @@ import {
   BrowserRouter as Router,
   Switch, Route, Link, useRouteMatch, useParms
 } from 'react-router-dom';
-import { Weather } from "./component/Weather"
+import Weather from "./component/Weather"
 
 function App() {
   return (
-
     <Router>
       <div>
         <nav>

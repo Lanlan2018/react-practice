@@ -2,9 +2,10 @@ import React from 'react';
 import { WiCloudy, WiCloudyGusts, WiHail, WiThunderstorm, WiFog, WiDayCloudy, WiDaySleetStorm } from "react-icons/wi";
 import { IconContext } from "react-icons";
 
-export default class Weather extends React.Component {
+class Weather extends React.Component {
   constructor(props) {
     super(props);
+    this.clickWeatherIcon = this.clickWeatherIcon.bind(this);
     this.weatherDataArr = [];
     let ajax = new XMLHttpRequest();
     ajax.open("GET", "./data.json", true);
@@ -19,15 +20,21 @@ export default class Weather extends React.Component {
     console.log('data json:');
   }
 
+  clickWeatherIcon(params) {
+    console.log(params);
+  }
+
   render() {
     return (
       <div>
-        <h4>  test Weather!!!  </h4>
-        {weatherDataArr.map((weatherObj) => <DaylyWeather weather={weatherObj} />)}
+        <h4>  One Week Weather Forecast  </h4>
+        {this.weatherDataArr.map((weatherObj) => <DaylyWeather key={weatherObj.time} weather={weatherObj} handleClick={this.clickWeatherIcon(weatherObj)} />)}
       </div>
     );
   }
 }
+
+export default Weather;
 
 
 function DaylyWeather(props) {
@@ -56,7 +63,7 @@ function DaylyWeather(props) {
       break;
   }
   return (
-    <div className="dayly-weather-container">
+    <div className="dayly-weather-container" onClick={props.handleClick}>
       <div className="time">
         {props.weather.time}
       </div>

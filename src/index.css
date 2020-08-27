@@ -18,11 +18,13 @@ code {
   height: 150px;
   text-align: center;
   vertical-align: middle;
+  float: left;
 }
 
 .global-weather-icon {
   vertical-align: middle;
   size: 3em;
+  cursor: pointer;
 }
 
 .time {
