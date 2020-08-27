@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.dayly-weather-container {
+  width: 200px;
+  height: 150px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.global-weather-icon {
+  vertical-align: middle;
+  size: 3em;
+}
+
+.time {
+  margin-bottom: 10px;
+}
+
+
+.high-temp {
+  margin-right: 10px;
+}
