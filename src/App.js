@@ -26,7 +26,7 @@ function App() {
         <Switch>
           <Route path="/weather" component={Weather}>
           </Route>
-          <Route path="/dailyWeather/:date" component={DailyWeather}>
+          <Route path="/dailyWeather/:city/:date" component={DailyWeather}>
           </Route>
           <Route path="/">
             <Home />
