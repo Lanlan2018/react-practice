@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+.city-search{
+  position: relative;
+}
+
+.city-search input{
+  width: 350px;
+  height: 30px;
+  font-size: 20px;
+  line-height: 30px;
+  box-sizing: border-box;
+}
+
+.city-search .keyWord-list{
+  width: 350px;
+  font-size: 18px;
+  line-height: 30px;
+  position: absolute;
+  top: 30px;
+  border: 1px solid #333;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.city-search .keyWord-list .list-item:hover{
+  background: #999;
+  cursor: pointer;
+}

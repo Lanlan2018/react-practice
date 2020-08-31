@@ -1,6 +1,6 @@
 import React from 'react';
 import WeatherDisplay from './WeatherDisplay'
-import CitySelector from "./CitySelector"
+import CitySearchBox from "./CitySearchBox"
 
 class Weather extends React.Component {
   constructor(props) {
@@ -50,7 +50,9 @@ class Weather extends React.Component {
     const { weatherDataArr, isLoaded, city } = this.state;
     return (
       <div>
-        <CitySelector onCityChange={this.cityChange} />
+        <div>City Search Box:</div>
+        <CitySearchBox onCityChange={this.cityChange} />
+        {/* <CitySelector onCityChange={this.cityChange} /> */}
         <h2 className="page-title">Three Days Weather Forecast Of {city}</h2>
         {isLoaded ? <h3>Loading ... </h3> : ''}
         {weatherDataArr.map((weatherObj) =>
