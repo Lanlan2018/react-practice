@@ -52,7 +52,7 @@ class Weather extends React.Component {
       <div>
         <CitySelector onCityChange={this.cityChange} />
         <h2 className="page-title">Three Days Weather Forecast Of {city}</h2>
-        {isLoaded ? <h3> Loading </h3> : ''}
+        {isLoaded ? <h3>Loading ... </h3> : ''}
         {weatherDataArr.map((weatherObj) =>
           <WeatherDisplay key={weatherObj.time} weather={weatherObj} handleClick={this.clickWeatherIcon.bind(this, weatherObj)} />
         )}

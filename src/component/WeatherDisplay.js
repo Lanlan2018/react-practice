@@ -1,15 +1,14 @@
 import React from 'react';
 import { 
- WiDaySunny,
-WiCloudy,
-WiCloudyGusts,
-WiCloud,
-WiDayRainMix,
-WiRainMix,
-WiRain,
-WiSnowflakeCold,
-WiFog,
-
+  WiDaySunny,
+  WiCloudy,
+  WiCloudyGusts,
+  WiCloud,
+  WiDayRainMix,
+  WiRainMix,
+  WiRain,
+  WiSnowflakeCold,
+  WiFog,
 } from "react-icons/wi";
 import { IconContext } from "react-icons";
 

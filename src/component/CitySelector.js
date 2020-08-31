@@ -19,7 +19,6 @@ export default class CitySelector extends React.Component {
   }
 
   render() {
-    const { city } = this.props;
     return (
         <select onChange={this.handleChange}>
             {this.cityList.map(item=>

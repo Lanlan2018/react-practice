@@ -42,7 +42,7 @@ class DailyWeather extends React.Component {
     return (
       <div>
         <h2 className="page-title">One Day Weather Forecast Detail Of {this.props.match.params.city}</h2>
-        {isLoaded ? <h2> Loading </h2> : ''}
+        {isLoaded ? <h2>Loading ...</h2> : ''}
 
         {weatherDataArr.map((weatherObj) =>
           <div>
@@ -54,7 +54,6 @@ class DailyWeather extends React.Component {
               <h4>紫外线强度指数: {weatherObj.uv_index}%</h4>
             </div>
           </div>)}
-
       </div>
     );
   }

@@ -3,7 +3,9 @@ import React from 'react';
 import './App.css';
 import {
   BrowserRouter as Router,
-  Switch, Route, Link, useRouteMatch, useParms
+  Switch,
+  Route,
+  Link
 } from 'react-router-dom';
 import Weather from "./component/Weather"
 import DailyWeather from "./component/DailyWeather"
