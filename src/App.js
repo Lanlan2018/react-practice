@@ -38,7 +38,7 @@ function App() {
 }
 
 function Home() {
-  return <h1>Test default Router - Home page Hellow World!!!</h1>
+  return <h2 className="page-title">Test default Router - Home page - Hellow World!!!</h2>
 }
 
 

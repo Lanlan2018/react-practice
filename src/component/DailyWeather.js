@@ -26,7 +26,8 @@ class DailyWeather extends React.Component {
               sunside: item.ss,
               windDir: item.wind_dir,
               windSpeed: item.wind_sc,
-              rainPercent: item.pop
+              rainPercent: item.pop,
+              uv_index: item.uv_index
             }
           });
         this.setState({
@@ -40,16 +41,17 @@ class DailyWeather extends React.Component {
     const { weatherDataArr, isLoaded } = this.state;
     return (
       <div>
-        <h4>  One Day Weather Forecast Of {this.props.match.params.city}  </h4>
-        {isLoaded ? <h3> Loading </h3> : ''}
+        <h2 className="page-title">One Day Weather Forecast Detail Of {this.props.match.params.city}</h2>
+        {isLoaded ? <h2> Loading </h2> : ''}
 
         {weatherDataArr.map((weatherObj) =>
           <div>
             <WeatherDisplay key={weatherObj.time} weather={weatherObj} />
             <div class="clearBoth">
-              <h4>日出时间： {weatherObj.sunrise} 日落时间：{weatherObj.sunside} </h4>
-              <h4>风向：  {weatherObj.windDir}   风力：{weatherObj.windSpeed} </h4>
+              <h4>日出时间:&nbsp;&nbsp;{weatherObj.sunrise}&nbsp;&nbsp;&nbsp;&nbsp;日落时间:&nbsp;&nbsp;{weatherObj.sunside} </h4>
+              <h4>风向:&nbsp;&nbsp;{weatherObj.windDir}&nbsp;&nbsp;&nbsp;&nbsp;风力:&nbsp;&nbsp;{weatherObj.windSpeed} </h4>
               <h4>降水概率: {weatherObj.rainPercent}%</h4>
+              <h4>紫外线强度指数: {weatherObj.uv_index}%</h4>
             </div>
           </div>)}
 

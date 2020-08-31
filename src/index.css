@@ -12,6 +12,9 @@ code {
     monospace;
 }
 
+.page-title {
+  text-align: center;
+}
 
 .dayly-weather-container {
   width: 200px;

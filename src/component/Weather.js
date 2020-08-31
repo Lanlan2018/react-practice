@@ -13,7 +13,7 @@ class Weather extends React.Component {
     this.cityChange = this.cityChange.bind(this);
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.fetchWeather(this.state.city);
   }
 
@@ -47,11 +47,11 @@ class Weather extends React.Component {
   }
 
   render() {
-    const { weatherDataArr, isLoaded,city } = this.state;
+    const { weatherDataArr, isLoaded, city } = this.state;
     return (
       <div>
         <CitySelector onCityChange={this.cityChange} />
-        <h4>  One Week Weather Forecast Of {city}  </h4>
+        <h2 className="page-title">Three Days Weather Forecast Of {city}</h2>
         {isLoaded ? <h3> Loading </h3> : ''}
         {weatherDataArr.map((weatherObj) =>
           <WeatherDisplay key={weatherObj.time} weather={weatherObj} handleClick={this.clickWeatherIcon.bind(this, weatherObj)} />
