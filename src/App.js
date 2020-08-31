@@ -6,6 +6,7 @@ import {
   Switch, Route, Link, useRouteMatch, useParms
 } from 'react-router-dom';
 import Weather from "./component/Weather"
+import DailyWeather from "./component/DailyWeather"
 
 function App() {
   return (
@@ -23,12 +24,13 @@ function App() {
         </nav>
 
         <Switch>
-          <Router path="/weather">
-            <Weather />
-          </Router>
-          <Router path="/">
+          <Route path="/weather" component={Weather}>
+          </Route>
+          <Route path="/dailyWeather/:date" component={DailyWeather}>
+          </Route>
+          <Route path="/">
             <Home />
-          </Router>
+          </Route>
         </Switch>
       </div>
     </Router>
