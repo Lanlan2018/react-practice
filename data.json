@@ -1,0 +1,11 @@
+{
+    "weather":[
+        { "time": "Mon", "weatherIcon": "wi-cloudy", "highTemp": "30", "lowTemp": "20" },
+        { "time": "Tue", "weatherIcon": "wi-cloudy-gusts", "highTemp": "31", "lowTemp": "21" },
+        { "time": "Wed", "weatherIcon": "wi-hail", "highTemp": "32", "lowTemp": "22" },
+        { "time": "Thu", "weatherIcon": "wi-thunderstorm", "highTemp": "33", "lowTemp": "23" },
+        { "time": "Fri", "weatherIcon": "wi-fog", "highTemp": "34", "lowTemp": "24" },
+        { "time": "Sat", "weatherIcon": "wi-day-cloudy", "highTemp": "35", "lowTemp": "25" },
+        { "time": "Sun", "weatherIcon": "wi-day-sleet-storm", "highTemp": "36", "lowTemp": "26" }
+    ]
+}
